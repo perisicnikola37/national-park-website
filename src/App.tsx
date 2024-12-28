@@ -1,39 +1,9 @@
-import Particles from "react-particles";
-import { type Engine } from "tsparticles-engine";
-import { loadStarsPreset } from "tsparticles-preset-stars";
+import StarParticlesComponent from "./components/StarParticlesComponent";
 
 function App() {
-  const particleOptions = {
-    preset: "stars",
-    background: {
-      color: {
-        value: "",
-      },
-    },
-    style: {
-      width: "100%",
-      height: "30vh",
-    },
-    particles: {
-      number: {
-        density: {
-          enable: true,
-          value_area: 300,
-        },
-      },
-    },
-  };
-
-  const customInit = async (engine: Engine) => {
-    const test = await loadStarsPreset(engine);
-    return test;
-  };
-
   return (
     <>
-      <div id="tsparticles">
-        <Particles options={particleOptions} init={customInit} />
-      </div>
+      <StarParticlesComponent />
       <div id="hero">
         <header>
           <div className="logo">ParkScape Adventures</div>
