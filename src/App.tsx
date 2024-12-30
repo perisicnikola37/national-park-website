@@ -1,4 +1,13 @@
+import { Link } from "react-router-dom";
+import logo from "../public/favicon.png";
+import ScrollDownArrow from "./components/ScrollDownArrow";
 import StarParticlesComponent from "./components/StarParticlesComponent";
+import { Avatar, AvatarFallback, AvatarImage } from "./components/ui/avatar";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "./components/ui/hover-card";
 import image from "./map.png";
 
 function App() {
@@ -45,14 +54,49 @@ function App() {
             <p className="price">Starts at $299 / night</p>
           </center>
         </div>
+
+        <div className="float-right absolute bottom-10 right-10 z-10">
+          <HoverCard openDelay={0} closeDelay={0}>
+            <HoverCardTrigger asChild>
+              <Avatar>
+                <AvatarImage src={logo} />
+                <AvatarFallback>NP</AvatarFallback>
+              </Avatar>
+            </HoverCardTrigger>
+            <HoverCardContent className="w-80">
+              <div className="flex justify-between space-x-4">
+                <Avatar>
+                  <AvatarImage src="https://avatars.githubusercontent.com/u/79047182?v=4" />
+                  <AvatarFallback>NP</AvatarFallback>
+                </Avatar>
+                <div className="space-y-1">
+                  <h4 className="text-sm font-semibold">Project author</h4>
+                  <p className="text-sm">Nikola Perišić - Software Engineer</p>
+                  <div className="flex items-center pt-2">
+                    <Link
+                      to="https://github.com/perisicnikola37"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="text-xs text-muted-foreground">
+                        GitHub
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+        </div>
+        <ScrollDownArrow />
       </div>
       <div id="info-section" className="bg-[#0C0E16] py-16 text-white p-16">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
-            <img src={image} height={630} width={630} alt="Nature" />
+            <img src={image} height={630} width={630} alt="Background" />
           </div>
 
-          <div className="md:w-1/2 md:pl-8">
+          <div id="scroll_location" className="md:w-1/2 md:pl-8">
             <h1 className="text-xl font-bold mb-4">Explore the Wilderness</h1>
             <p className="text-lg">
               Join us for an unforgettable experience in the heart of nature.
