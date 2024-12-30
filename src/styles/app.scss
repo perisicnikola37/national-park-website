@@ -1,0 +1,200 @@
+@import './variables.scss';
+
+#hero {
+    font-family: $font-family;
+    font-size: 1rem;
+    color: $primary-color;
+    height: 100vh;
+    width: 100%;
+    background: $background-image;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background: $gradient;
+        z-index: 2;
+    }
+
+    .centeredText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        z-index: 2;
+        padding: 0 20px;
+
+        p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            color: $primary-color;
+
+            &:nth-of-type(2) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .stretched {
+        width: 40%;
+        color: $secondary-color !important;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        .logo {
+            font-size: 1rem;
+            color: $primary-color;
+        }
+
+        ul {
+            display: flex;
+            text-transform: uppercase;
+            list-style: none;
+
+            li {
+                margin-left: 1.5rem;
+            }
+
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                font-size: 1rem;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    p {
+        margin-top: 0.2rem;
+        font-weight: 400;
+
+        &:nth-of-type(2) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.left-text {
+    color: $secondary-color;
+    font-size: 1rem;
+    text-align: left;
+    margin-left: 5rem;
+    position: absolute;
+    bottom: 12rem;
+    left: 0;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    text-transform: uppercase;
+    z-index: 2;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -8rem;
+        top: 50%;
+        width: 7rem;
+        height: 1px;
+        background-color: $primary-color;
+        transform: translateY(-50%);
+    }
+}
+
+.smoke-container {
+    position: absolute;
+    height: 430px;
+    width: 200px;
+    bottom: 130px;
+    left: 23%;
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0));
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center bottom;
+    z-index: 1;
+}
+
+svg {
+    position: absolute;
+    top: 13%;
+    height: 300px;
+    width: 200px;
+    z-index: 1;
+
+    path {
+        fill: none;
+        stroke: $primary-color;
+        opacity: 0.3;
+        stroke-width: 3px;
+        stroke-dasharray: 500 100;
+        stroke-linecap: round;
+        animation: dash 3s linear infinite;
+    }
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: 600;
+    }
+}
+
+#tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.reserve-btn-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.reserve-btn {
+    padding: 10px 24px;
+    background-color: $primary-color;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: #333;
+        color: $primary-color;
+    }
+}
+
+.price {
+    margin-top: 20px !important;
+}

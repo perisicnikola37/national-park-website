@@ -1,0 +1,180 @@
+#hero {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  background: url("../assets/hero_section_background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(12, 14, 22) 100%);
+  z-index: 2;
+}
+#hero .centeredText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  z-index: 2;
+  padding: 0 20px;
+}
+#hero .centeredText p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #fff;
+}
+#hero .centeredText p:nth-of-type(2) {
+  font-size: 1.8rem;
+}
+#hero .stretched {
+  width: 40%;
+  color: #d3d3d3 !important;
+}
+#hero header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#hero header .logo {
+  font-size: 1rem;
+  color: #fff;
+}
+#hero header ul {
+  display: flex;
+  text-transform: uppercase;
+  list-style: none;
+}
+#hero header ul li {
+  margin-left: 1.5rem;
+}
+#hero header ul a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+#hero header ul a:hover {
+  color: #d3d3d3;
+}
+#hero p {
+  margin-top: 0.2rem;
+  font-weight: 400;
+}
+#hero p:nth-of-type(2) {
+  font-size: 1.5rem;
+}
+
+.left-text {
+  color: #d3d3d3;
+  font-size: 1rem;
+  text-align: left;
+  margin-left: 5rem;
+  position: absolute;
+  bottom: 12rem;
+  left: 0;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.left-text::before {
+  content: "";
+  position: absolute;
+  left: -8rem;
+  top: 50%;
+  width: 7rem;
+  height: 1px;
+  background-color: #fff;
+  transform: translateY(-50%);
+}
+
+.smoke-container {
+  position: absolute;
+  height: 430px;
+  width: 200px;
+  bottom: 130px;
+  left: 23%;
+  -webkit-mask-image: linear-gradient(to top, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0));
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  z-index: 1;
+}
+
+svg {
+  position: absolute;
+  top: 13%;
+  height: 300px;
+  width: 200px;
+  z-index: 1;
+}
+svg path {
+  fill: none;
+  stroke: #fff;
+  opacity: 0.3;
+  stroke-width: 3px;
+  stroke-dasharray: 500 100;
+  stroke-linecap: round;
+  animation: dash 3s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 600;
+  }
+}
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reserve-btn-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.reserve-btn {
+  padding: 10px 24px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.reserve-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.price {
+  margin-top: 20px !important;
+}/*# sourceMappingURL=app.css.map */

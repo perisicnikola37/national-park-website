@@ -1,5 +1,5 @@
-import image from "../src/image.png";
 import StarParticlesComponent from "./components/StarParticlesComponent";
+import image from "./map.png";
 
 function App() {
   return (
@@ -46,15 +46,12 @@ function App() {
           </center>
         </div>
       </div>
-
       <div id="info-section" className="bg-[#0C0E16] py-16 text-white p-16">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-          {/* Left Box (Image) */}
           <div className="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
             <img src={image} height={630} width={630} alt="Nature" />
           </div>
 
-          {/* Right Box (Text) */}
           <div className="md:w-1/2 md:pl-8">
             <h1 className="text-xl font-bold mb-4">Explore the Wilderness</h1>
             <p className="text-lg">
