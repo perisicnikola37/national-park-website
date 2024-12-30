@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Particles from "react-particles";
 import { type Engine } from "tsparticles-engine";
 import { loadStarsPreset } from "tsparticles-preset-stars";
 
 const StarParticlesComponent: React.FC = () => {
+  const [showParticles, setShowParticles] = useState(true);
+
   const particleOptions = {
     preset: "stars",
     background: {
@@ -48,9 +50,23 @@ const StarParticlesComponent: React.FC = () => {
     await loadStarsPreset(engine);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = window.innerHeight * 0.1;
+      setShowParticles(window.scrollY < scrollThreshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div id="tsparticles">
-      <Particles options={particleOptions} init={customInit} />
+      {showParticles && (
+        <Particles options={particleOptions} init={customInit} />
+      )}
     </div>
   );
 };
