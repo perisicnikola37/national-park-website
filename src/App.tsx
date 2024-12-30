@@ -51,7 +51,14 @@ function App() {
         <div className="reserve-btn-container">
           <center>
             <button className="reserve-btn">Reserve a Spot</button>
-            <p className="price">Starts at $299 / night</p>
+            <p className="price">
+              Starts at &nbsp;
+              <span className="font-semibold">
+                <span className="text-sm">$</span>
+                <span>299</span>
+              </span>
+              &nbsp; / night
+            </p>
           </center>
         </div>
 
@@ -92,7 +99,9 @@ function App() {
       </div>
       <div id="info-section" className="bg-[#0C0E16] py-16 text-white p-16">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
+          <div className="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0 relative">
+            <div className="circle pulse blue"></div>
+            <div className="circle pulse red"></div>
             <img src={image} height={630} width={630} alt="Background" />
           </div>
 
