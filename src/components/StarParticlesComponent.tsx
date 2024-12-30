@@ -15,12 +15,12 @@ const StarParticlesComponent: React.FC = () => {
     },
     style: {
       width: "100%",
-      height: "30vh",
+      height: "29vh",
     },
     particles: {
       number: {
         density: {
-          value_area: 130,
+          value_area: 100,
         },
       },
       opacity: {
@@ -28,9 +28,9 @@ const StarParticlesComponent: React.FC = () => {
         random: false,
         anim: {
           enable: true,
-          speed: 4,
+          speed: 5,
           opacity_min: 0.5,
-          sync: false,
+          sync: true,
         },
       },
       size: {

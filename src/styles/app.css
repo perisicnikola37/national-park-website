@@ -107,7 +107,7 @@
 
 .smoke-container {
   position: absolute;
-  height: 430px;
+  height: 450px;
   width: 200px;
   bottom: 130px;
   left: 23%;
@@ -149,7 +149,7 @@ svg path {
   left: 0;
   width: 100%;
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
 }
 
 .reserve-btn-container {
