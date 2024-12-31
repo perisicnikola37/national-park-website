@@ -21,6 +21,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         reserve:
           "px-6 py-2.5 bg-white text-gray-800 border-none rounded-full text-sm cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800 hover:text-white",
+        reserveOpposite:
+          "px-6 py-2.5 bg-gray-800 text-white border-none rounded-full text-sm cursor-pointer transition-colors duration-300 ease-in-out hover:bg-white hover:text-gray-800",
       },
       size: {
         default: "h-9 px-4 py-2",
