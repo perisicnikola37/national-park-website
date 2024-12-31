@@ -1,0 +1,57 @@
+@mixin text-center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin button-style($bg-color, $text-color) {
+    padding: 10px 24px;
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+        color: lighten($text-color, 10%);
+    }
+}
+
+@mixin background-cover($image, $size: cover, $position: center) {
+    background-image: url($image);
+    background-size: $size;
+    background-position: $position;
+    background-repeat: no-repeat;
+}
+
+@mixin scroll-bar {
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $primary-color;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}

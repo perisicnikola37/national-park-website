@@ -29,6 +29,18 @@ body {
   background: #555;
 }
 
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1593c9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 #hero {
   font-size: 1rem;
   color: #fff;
@@ -109,6 +121,9 @@ body {
 }
 
 .left-text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   color: #d3d3d3;
   font-size: 1rem;
   text-align: left;
@@ -124,6 +139,30 @@ body {
   content: "";
   position: absolute;
   left: -8rem;
+  top: 50%;
+  width: 7rem;
+  height: 1px;
+  background-color: #fff;
+  transform: translateY(-50%);
+}
+
+.right-text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #d3d3d3;
+  text-align: right;
+  margin-right: 5rem;
+  position: absolute;
+  right: 0;
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+  text-transform: uppercase;
+}
+.right-text::before {
+  content: "";
+  position: absolute;
+  right: -8rem;
   top: 50%;
   width: 7rem;
   height: 1px;
@@ -218,6 +257,10 @@ svg path {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .reserve-btn:hover {
+  background-color: #e6e6e6;
+  color: #4d4d4d;
+}
+.reserve-btn:hover {
   background-color: #333;
   color: #fff;
 }
@@ -237,16 +280,34 @@ svg path {
 
 .blue {
   background-color: #3652D9;
-  top: 33%;
-  left: 45.8%;
-  animation: pulse-animation-blue 2s infinite;
+  top: 70%;
+  left: 23%;
+  animation: pulse-animation-blue 1.3s infinite;
+}
+.blue::before {
+  content: "START";
+  position: absolute;
+  top: 0px;
+  left: -180%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 0.75rem;
 }
 
 .red {
   background-color: #D93636;
-  top: 53.5%;
-  left: 24%;
-  animation: pulse-animation-red 2s infinite;
+  top: 30.5%;
+  left: 60%;
+  animation: pulse-animation-red 1.3s infinite;
+}
+.red::before {
+  content: "END";
+  position: absolute;
+  top: 0px;
+  left: -180%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 0.75rem;
 }
 
 @keyframes pulse-animation-blue {
@@ -270,4 +331,65 @@ svg path {
   100% {
     box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
   }
+}
+#forest_silhouette {
+  background-image: url("../assets/forest_silhouette.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#forest_silhouette::before,
+#forest_silhouette::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#forest_silhouette::after {
+  bottom: 0;
+  background: linear-gradient(to top, black, transparent);
+}
+
+#bear {
+  background-image: url("../assets/bear.webp");
+}
+
+@keyframes pulseBoxShadow {
+  0% {
+    box-shadow: 0 10px 20px rgba(75, 75, 75, 0.5);
+  }
+  50% {
+    box-shadow: 0 20px 40px rgba(75, 75, 75, 0.7);
+  }
+  100% {
+    box-shadow: 0 10px 20px rgba(75, 75, 75, 0.5);
+  }
+}
+.animate-pulse-shadow {
+  animation: pulseBoxShadow 3s infinite;
+}
+
+#scroll_location h1::-moz-selection {
+  background-color: #3652D9;
+}
+
+#scroll_location h1::selection {
+  background-color: #3652D9;
+}
+#scroll_location p::-moz-selection {
+  background-color: #D93636;
+}
+#scroll_location p::selection {
+  background-color: #D93636;
+}
+
+.left_side_border {
+  border-left: 2px solid #1593c9;
+  padding-left: 1.5%;
 }/*# sourceMappingURL=app.css.map */
