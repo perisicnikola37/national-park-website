@@ -4,6 +4,7 @@ import Author from "./components/Author";
 import HeroSection from "./components/HeroSection";
 import HouseMountainsSection from "./components/HouseMountainsSection";
 import InfoSection from "./components/InfoSection";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import StarParticlesComponent from "./components/StarParticlesComponent";
 import TopThingsToDo from "./components/TopThingsToDo";
 import WildlifeSection from "./components/WildlifeSection";
@@ -21,6 +22,8 @@ function App() {
         <TopThingsToDo />
         <HouseMountainsSection />
       </LazyLoadComponent>
+
+      <ScrollToTopButton />
     </>
   );
 }
