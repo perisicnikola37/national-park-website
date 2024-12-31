@@ -375,21 +375,55 @@ svg path {
   animation: pulseBoxShadow 3s infinite;
 }
 
-#scroll_location h1::-moz-selection {
+#explore_section h1::-moz-selection {
   background-color: #3652D9;
 }
 
-#scroll_location h1::selection {
+#explore_section h1::selection {
   background-color: #3652D9;
 }
-#scroll_location p::-moz-selection {
+#explore_section p::-moz-selection {
   background-color: #D93636;
 }
-#scroll_location p::selection {
+#explore_section p::selection {
   background-color: #D93636;
 }
 
 .left_side_border {
   border-left: 2px solid #1593c9;
   padding-left: 1.5%;
+}
+
+#left_box {
+  background-image: url("../assets/man_in_nature.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#analytics_section {
+  position: relative;
+  text-align: center;
+}
+#analytics_section .circle-overlay {
+  position: absolute;
+  top: 44%;
+  left: 62%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  stroke-width: 5px;
+}
+
+.position-container {
+  position: absolute;
+  top: 53%;
+  right: 18%;
+  transform: translateX(50%) translateY(-20%);
+  text-align: left;
+}
+
+.text-overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }/*# sourceMappingURL=app.css.map */

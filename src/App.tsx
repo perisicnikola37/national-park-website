@@ -1,3 +1,5 @@
+import { LazyLoadComponent } from "react-lazy-load-image-component";
+import AnalyticsSection from "./components/AnalyticsSection";
 import Author from "./components/Author";
 import HeroSection from "./components/HeroSection";
 import InfoSection from "./components/InfoSection";
@@ -7,11 +9,14 @@ import WildlifeSection from "./components/WildlifeSection";
 function App() {
   return (
     <>
-      <StarParticlesComponent />
-      <HeroSection />
-      <Author />
-      <InfoSection />
-      <WildlifeSection />
+      <LazyLoadComponent threshold={100}>
+        <StarParticlesComponent />
+        <HeroSection />
+        <Author />
+        <InfoSection />
+        <WildlifeSection />
+        <AnalyticsSection />
+      </LazyLoadComponent>
     </>
   );
 }

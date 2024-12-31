@@ -1,3 +1,5 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import mapImage from "../assets/map.jpg";
 import photo1 from "../assets/photo1.jpg";
 import photo2 from "../assets/photo2.jpg";
@@ -14,14 +16,20 @@ export default function InfoSection() {
           <div className="circle pulse blue z-10"></div>
           <div className="circle pulse red z-10"></div>
           <div className="relative">
-            <img src={mapImage} height={630} width={630} alt="Background" />
+            <LazyLoadImage
+              effect="blur"
+              src={mapImage}
+              height={630}
+              width={630}
+              alt={"Map of Bois-de-Liesse Nature Park"}
+            />
             <div className="absolute top-0 text-white">
               <h2 className="text-2xl font-bold">Bois-de-Liesse</h2>
               <p className="text-lg">Nature park</p>
             </div>
           </div>
         </div>
-        <div id="scroll_location" className="md:w-1/2 md:pl-16">
+        <div id="explore_section" className="md:w-1/2 md:pl-16">
           <h1 className="text-xl font-bold mb-4">
             Explore Special Camping Spots
           </h1>
@@ -37,11 +45,17 @@ export default function InfoSection() {
             create lasting memories in the great outdoors.
           </p>
           <div className="flex mt-4 space-x-4 select-none">
-            <img src={photo1} alt="photo1" className="w-60 h-32 rounded-sm" />
-            <img
+            <LazyLoadImage
+              effect="blur"
+              src={photo1}
+              alt={"Photo 1"}
+              className="w-60 h-32 rounded-sm"
+            />
+            <LazyLoadImage
+              effect="blur"
               src={photo2}
-              alt="photo2"
-              className="w-52 h-32 object-cover rounded-sm"
+              alt={"Photo 2"}
+              className="w-60 h-32 object-cover rounded-sm"
             />
           </div>
         </div>
