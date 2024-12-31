@@ -1,8 +1,11 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import CountUp from "react-countup";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import neom from "../assets/neom.jpg";
+import stats from "../config/stats_data.json";
 
 export default function AnalyticsSection() {
+  const durationTime = 5;
   return (
     <div
       id="analytics_section"
@@ -13,12 +16,11 @@ export default function AnalyticsSection() {
       <LazyLoadImage src={neom} className="w-full h-full object-cover" />
 
       <svg
-        className="circle-overlay"
+        className="circle-overlay animate-spin-slow"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 300 300"
       >
         <circle cx="150" cy="150" r="140" fill="rgba(255, 223, 0, 0.055)" />
-
         <circle
           cx="150"
           cy="150"
@@ -33,9 +35,7 @@ export default function AnalyticsSection() {
       <div className="position-container">
         <div className="text-overlay">
           <h2 className="text-md font-bold mb-2">Sunset Ridge Lookout</h2>
-
           <div className="border-t-2 border-dashed border-white w-96 mx-auto mb-2"></div>
-
           <p className="text-sm">859m Altitude</p>
         </div>
       </div>
@@ -50,28 +50,52 @@ export default function AnalyticsSection() {
 
           <div className="flex space-x-8 mb-4">
             <div className="flex flex-col items-center">
-              <p className="text-4xl font-bold">836</p>
+              <p className="text-4xl font-bold">
+                <CountUp
+                  end={stats.dailyGuidedVisits}
+                  duration={durationTime}
+                />
+              </p>
               <p className="text-xs text-center">
                 daily guided <br /> visits
               </p>
             </div>
 
             <div className="flex flex-col items-center">
-              <p className="text-4xl font-bold">98%</p>
+              <p className="text-4xl font-bold">
+                <CountUp
+                  end={stats.visitorSatisfactions}
+                  duration={durationTime}
+                  suffix="%"
+                />
+              </p>
               <p className="text-xs text-center">
                 visitor <br /> satisfactions
               </p>
             </div>
 
             <div className="flex flex-col items-center">
-              <p className="text-4xl font-bold">70+</p>
+              <p className="text-4xl font-bold">
+                <CountUp
+                  end={stats.biodiversitySpecies}
+                  duration={durationTime}
+                  suffix="+"
+                />
+              </p>
               <p className="text-xs text-center">
                 biodiversity <br /> species
               </p>
             </div>
 
             <div className="flex flex-col items-center">
-              <p className="text-4xl font-bold">158k</p>
+              <p className="text-4xl font-bold">
+                <CountUp
+                  end={stats.communityFollowers}
+                  duration={durationTime}
+                  separator=","
+                  suffix="k"
+                />
+              </p>
               <p className="text-xs text-center">
                 community <br /> followers
               </p>

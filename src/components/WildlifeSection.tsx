@@ -50,7 +50,10 @@ export default function WildlifeSection() {
               <div
                 id="bear"
                 className="absolute w-full h-full rounded-full bg-cover bg-center scale-150 animate-pulse-shadow"
-              ></div>
+              >
+                <div className="eye left-eye"></div>
+                <div className="eye right-eye"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -80,7 +83,7 @@ export default function WildlifeSection() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center mt-8 mb-36">
+        <div className="flex flex-col items-center justify-center mt-8 mb-24">
           <h3 className="text-2xl font-semibold mb-6 text-center">
             Why We're Special?
           </h3>

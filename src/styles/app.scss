@@ -357,7 +357,45 @@ svg {
 
 #bear {
     background-image: url("../assets/bear.webp");
+
+    .eye {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        border-radius: 50%;
+        box-shadow: 0 0 10px 2px #262626;
+        animation: pulse 3s infinite;
+    }
+
+    .left-eye {
+        top: 35.7%;
+        left: 37%;
+    }
+
+    .right-eye {
+        top: 35.7%;
+        left: 62.2%;
+    }
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(8);
+        box-shadow: 0 0 10px 2px #4a2b2b;
+    }
+
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px 4px #6b3d3d;
+    }
+
+    100% {
+        transform: scale(8);
+        box-shadow: 0 0 10px 2px #4a2b2b;
+    }
+}
+
 
 @keyframes pulseBoxShadow {
     0% {
@@ -405,8 +443,8 @@ svg {
 
     .circle-overlay {
         position: absolute;
-        top: 44%;
-        left: 62%;
+        top: 43%;
+        left: 55%;
         transform: translateX(-50%);
 
         width: 250px;
@@ -447,4 +485,18 @@ svg {
     &:hover {
         background-color: $primary-color-hover;
     }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin 40s linear infinite;
 }
