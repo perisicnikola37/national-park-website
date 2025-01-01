@@ -15,22 +15,24 @@ export default function AnalyticsSection() {
 
       <LazyLoadImage src={neom} className="w-full h-full object-cover" />
 
-      <svg
-        className="circle-overlay animate-spin-slow"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 300 300"
-      >
-        <circle cx="150" cy="150" r="140" fill="rgba(255, 223, 0, 0.055)" />
-        <circle
-          cx="150"
-          cy="150"
-          r="140"
-          fill="none"
-          stroke="white"
-          strokeWidth="6"
-          strokeDasharray="2, 10"
-        />
-      </svg>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <svg
+          className="circle-overlay animate-spin-slow"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 300 300"
+        >
+          <circle cx="150" cy="150" r="140" fill="rgba(255, 223, 0, 0.055)" />
+          <circle
+            cx="150"
+            cy="150"
+            r="140"
+            fill="none"
+            stroke="white"
+            strokeWidth="6"
+            strokeDasharray="2, 10"
+          />
+        </svg>
+      </div>
 
       <div className="position-container">
         <div className="text-overlay">

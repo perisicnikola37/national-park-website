@@ -1,5 +1,6 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Typewriter from "typewriter-effect";
 import houseMountainsImage from "../assets/house.jpg";
 
 export default function HouseMountainsSection() {
@@ -8,9 +9,7 @@ export default function HouseMountainsSection() {
       id="analytics_section"
       className="relative text-black bg-white h-[60rem] w-full mt-36"
     >
-      {/* Gradient to cover the top, including corners */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-transparent h-[30%] w-full"></div>
-      {/* Additional white coverage for top-left and top-right corners */}
       <div className="absolute top-0 left-0 right-0 h-20 bg-white"></div>
 
       <LazyLoadImage
@@ -20,7 +19,15 @@ export default function HouseMountainsSection() {
 
       <div className="absolute top-[5%] left-1/2 transform -translate-x-1/2 text-center px-6">
         <h1 className="text-2xl font-semibold mb-4">
-          Your Exploration Starts Here
+          <Typewriter
+            options={{
+              strings: ["Your exploration starts here"],
+              autoStart: true,
+              loop: true,
+              delay: 50,
+              deleteSpeed: 10,
+            }}
+          />
         </h1>
         <p className="text-lg mb-6 w-[60%] m-auto">
           Our mission is to provide unique experiences for adventurers who seek

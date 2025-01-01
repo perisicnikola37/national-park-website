@@ -5,11 +5,11 @@ import { Button } from "./ui/button";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 export default function WildlifeSection() {
   return (
-    <div id="info-section" className="relative bg-[#0B0E15] text-white">
+    <div id="join_us_section" className="relative bg-[#0B0E15] text-white">
       <div id="forest_silhouette" className="h-96"></div>
       <div
         id="content"
-        className="flex flex-col justify-center items-center bg-black w-full"
+        className="flex flex-col justify-center items-center bg-black w-[full]"
       >
         <div className="flex justify-between items-center w-full px-8 lg:px-64 h-[40rem]">
           <div className="w-full lg:w-1/2 flex flex-col justify-between">
@@ -18,7 +18,6 @@ export default function WildlifeSection() {
                 <h2 id="scroll_location" className="text-2xl left_side_border">
                   Discover Captivating Wildlife
                 </h2>
-
                 <LazyLoadImage
                   effect="blur"
                   src={racoonImage}
@@ -85,10 +84,12 @@ export default function WildlifeSection() {
         </div>
         <div className="flex flex-col items-center justify-center mt-8 mb-24">
           <h3 className="text-2xl font-semibold mb-6 text-center">
-            Why We're Special?
+            Why We Are Special?
           </h3>
           <div className="relative flex justify-center items-center">
-            <div className="w-16 h-16 border-2 border-dashed border-gray-400 rounded-full flex justify-center items-center"></div>
+            <div className="w-16 h-16 border-2 border-dashed border-gray-400 rounded-full flex justify-center items-center">
+              <i className="fas fa-arrow-down text-gray-400 text-2xl"></i>
+            </div>
           </div>
         </div>
       </div>

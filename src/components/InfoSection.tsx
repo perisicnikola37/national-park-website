@@ -3,7 +3,6 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import mapImage from "../assets/map.jpg";
 import photo1 from "../assets/photo1.jpg";
 import photo2 from "../assets/photo2.jpg";
-
 export default function InfoSection() {
   return (
     <div
@@ -12,6 +11,7 @@ export default function InfoSection() {
     >
       <div className="container pl-44 pr-44 mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-8">
         <p className="right-text">40.71° N, 74.60° W</p>
+
         <div className="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0 relative select-none">
           <div className="circle pulse blue z-10"></div>
           <div className="circle pulse red z-10"></div>
@@ -19,8 +19,8 @@ export default function InfoSection() {
             <LazyLoadImage
               effect="blur"
               src={mapImage}
-              height={630}
-              width={630}
+              height={"auto"}
+              width={"auto"}
               alt={"Map of Bois-de-Liesse Nature Park"}
             />
             <div className="absolute top-0 text-white">
@@ -29,8 +29,13 @@ export default function InfoSection() {
             </div>
           </div>
         </div>
-        <div id="explore_section" className="md:w-1/2 md:pl-16">
-          <h1 className="text-xl font-bold mb-4">
+
+        <div
+          id="explore_section"
+          className="md:w-1/2 md:pl-16 flex flex-col justify-center h-full"
+        >
+          <i className="fa-solid fa-mountain-sun text-gray-500"></i>
+          <h1 className="text-xl font-bold mb-4 mt-2">
             Explore Special Camping Spots
           </h1>
           <p className="text-sm text-gray-300">

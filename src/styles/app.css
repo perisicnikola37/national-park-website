@@ -432,18 +432,17 @@ svg path {
   background-size: cover;
 }
 
-#analytics_section {
-  position: relative;
-  text-align: center;
-}
 #analytics_section .circle-overlay {
   position: absolute;
   top: 43%;
   left: 55%;
-  transform: translateX(-50%);
   width: 250px;
   height: 250px;
   stroke-width: 5px;
+}
+
+#join_us_section {
+  overflow: hidden;
 }
 
 .position-container {
